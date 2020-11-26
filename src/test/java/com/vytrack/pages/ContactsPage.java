@@ -16,6 +16,5 @@ public class ContactsPage extends BasePage {
         return Driver.get().findElement(By.xpath(xpath));
     }
 
-
 }
 

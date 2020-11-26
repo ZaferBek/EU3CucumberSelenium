@@ -19,7 +19,7 @@ Feature: User should be able to login
     When the user enters the store manager information
     Then the user should be able to login
 
-  @wip
+
   Scenario: login as a given user
     When the user logs in using following credentials
       | username  | user10      |

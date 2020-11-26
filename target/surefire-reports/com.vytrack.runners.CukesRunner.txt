@@ -1,7 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: com.vytrack.runners.CukesRunner
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 95.255 s <<< FAILURE! - in com.vytrack.runners.CukesRunner
-Sales manager user(Account types)  Time elapsed: 27.758 s  <<< FAILURE!
-java.lang.AssertionError
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 55.111 s <<< FAILURE! - in com.vytrack.runners.CukesRunner
+Contacts Test(Contacts page)  Time elapsed: 26.516 s  <<< ERROR!
+java.lang.NullPointerException
+
+Contacts Test(Contacts page)  Time elapsed: 27.718 s  <<< ERROR!
+java.lang.NullPointerException
 
