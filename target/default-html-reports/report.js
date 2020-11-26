@@ -4,13 +4,59 @@ formatter.feature({
   "description": "",
   "keyword": "Feature"
 });
-formatter.scenario({
-  "name": "Driver user",
+formatter.scenarioOutline({
+  "name": "Different user types",
   "description": "",
-  "keyword": "Scenario",
+  "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@wip"
+      "name": "@smoke"
+    }
+  ]
+});
+formatter.step({
+  "name": "the user logged in as \"\u003cuserType\u003e\"",
+  "keyword": "Given "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "userType"
+      ]
+    },
+    {
+      "cells": [
+        "driver"
+      ]
+    },
+    {
+      "cells": [
+        "admin"
+      ]
+    },
+    {
+      "cells": [
+        "store manager"
+      ]
+    },
+    {
+      "cells": [
+        "sales manager"
+      ]
+    }
+  ]
+});
+formatter.scenario({
+  "name": "Different user types",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@smoke"
     }
   ]
 });
@@ -27,36 +73,16 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
-formatter.step({
-  "name": "the user navigates to \"Activities\" \"Calendar Events\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.vytrack.step_definitions.NavigationMenuStepDefs.the_user_navigates_to(java.lang.String,java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "the title contains \"Calendar Events - Activities\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.vytrack.step_definitions.LoginStepDefs.the_title_contains(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
 formatter.after({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Sales manager user",
+  "name": "Different user types",
   "description": "",
-  "keyword": "Scenario",
+  "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@wip"
+      "name": "@smoke"
     }
   ]
 });
@@ -64,34 +90,14 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user logged in as \"sales manager\"",
+  "name": "the user logged in as \"admin\"",
   "keyword": "Given "
 });
 formatter.match({
   "location": "com.vytrack.step_definitions.LoginStepDefs.the_user_logged_in_as(java.lang.String)"
 });
 formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "the user navigates to \"Customers\" \"Accounts\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.vytrack.step_definitions.NavigationMenuStepDefs.the_user_navigates_to(java.lang.String,java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "the title contains \"Accounts - Customers\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.vytrack.step_definitions.LoginStepDefs.the_title_contains(java.lang.String)"
-});
-formatter.result({
-  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat com.vytrack.step_definitions.LoginStepDefs.the_title_contains(LoginStepDefs.java:69)\r\n\tat ✽.the title contains \"Accounts - Customers\"(file:///C:/Users/Lenovo/EU3CucumberSelenium/src/test/resources/features/AccountType.feature:11)\r\n",
+  "error_message": "java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence\r\n\tat org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat com.sun.proxy.$Proxy19.sendKeys(Unknown Source)\r\n\tat com.vytrack.pages.LoginPage.login(LoginPage.java:25)\r\n\tat com.vytrack.step_definitions.LoginStepDefs.the_user_logged_in_as(LoginStepDefs.java:104)\r\n\tat ✽.the user logged in as \"admin\"(file:///C:/Users/Lenovo/EU3CucumberSelenium/src/test/resources/features/AccountType.feature:47)\r\n",
   "status": "failed"
 });
 formatter.embedding("image/png", "embedded0.png", "screenshot");
@@ -99,12 +105,12 @@ formatter.after({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Store manager user",
+  "name": "Different user types",
   "description": "",
-  "keyword": "Scenario",
+  "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@wip"
+      "name": "@smoke"
     }
   ]
 });
@@ -121,22 +127,28 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
-formatter.step({
-  "name": "the user navigates to \"Customers\" \"Contacts\"",
-  "keyword": "When "
+formatter.after({
+  "status": "passed"
 });
-formatter.match({
-  "location": "com.vytrack.step_definitions.NavigationMenuStepDefs.the_user_navigates_to(java.lang.String,java.lang.String)"
+formatter.scenario({
+  "name": "Different user types",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@smoke"
+    }
+  ]
 });
-formatter.result({
+formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "the title contains \"Contacts - Customers\"",
-  "keyword": "Then "
+  "name": "the user logged in as \"sales manager\"",
+  "keyword": "Given "
 });
 formatter.match({
-  "location": "com.vytrack.step_definitions.LoginStepDefs.the_title_contains(java.lang.String)"
+  "location": "com.vytrack.step_definitions.LoginStepDefs.the_user_logged_in_as(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
@@ -152,8 +164,191 @@ formatter.feature({
   "tags": [
     {
       "name": "@login"
+    },
+    {
+      "name": "@smoke"
     }
   ]
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user is on the login page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.vytrack.step_definitions.LoginStepDefs.the_user_is_on_the_login_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Login as a driver",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@login"
+    },
+    {
+      "name": "@smoke"
+    },
+    {
+      "name": "@driver"
+    },
+    {
+      "name": "@VYT-123"
+    }
+  ]
+});
+formatter.step({
+  "name": "the user enters the driver information",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.vytrack.step_definitions.LoginStepDefs.the_user_enters_the_driver_information()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user should be able to login",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.vytrack.step_definitions.LoginStepDefs.the_user_should_be_able_to_login()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user is on the login page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.vytrack.step_definitions.LoginStepDefs.the_user_is_on_the_login_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Login as a sales manager",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@login"
+    },
+    {
+      "name": "@smoke"
+    },
+    {
+      "name": "@sales_manager"
+    },
+    {
+      "name": "@VYT-123"
+    }
+  ]
+});
+formatter.step({
+  "name": "the user enters the sales manager information",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.vytrack.step_definitions.LoginStepDefs.the_user_enters_the_sales_manager_information()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user should be able to login",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.vytrack.step_definitions.LoginStepDefs.the_user_should_be_able_to_login()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user is on the login page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.vytrack.step_definitions.LoginStepDefs.the_user_is_on_the_login_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Login as a store manager",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@login"
+    },
+    {
+      "name": "@smoke"
+    },
+    {
+      "name": "@store_manager"
+    },
+    {
+      "name": "@smoke"
+    }
+  ]
+});
+formatter.step({
+  "name": "the user enters the store manager information",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.vytrack.step_definitions.LoginStepDefs.the_user_enters_the_store_manager_information()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user should be able to login",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.vytrack.step_definitions.LoginStepDefs.the_user_should_be_able_to_login()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
 });
 formatter.background({
   "name": "",
@@ -182,7 +377,7 @@ formatter.scenario({
       "name": "@login"
     },
     {
-      "name": "@wip"
+      "name": "@smoke"
     }
   ]
 });
