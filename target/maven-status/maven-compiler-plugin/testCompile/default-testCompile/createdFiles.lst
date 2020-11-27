@@ -5,6 +5,7 @@ com\vytrack\step_definitions\ContactsStepDefs.class
 com\vytrack\step_definitions\LoginStepDefs.class
 com\vytrack\pages\BasePage.class
 com\vytrack\utilities\ConfigurationReader.class
+com\vytrack\utilities\DBUtils.class
 com\vytrack\pages\CalendarEventsPage.class
 com\vytrack\pages\DashboardPage.class
 com\vytrack\utilities\BrowserUtils$1.class
